@@ -9,7 +9,7 @@ The features can be broken down into 6 groups:
 * Style - This feature group captures the style and structure of the article. It includes POS (part of speech) tags and simple linguistic features such as number of quotes, punctuation, and all capitalized words.
 * Complexity - This feature group captures how complex the writing in the article is. It includes lexical diversity (type-token ratio), multiple reading difficulty metrics, length of words, and length of sentences.
 * Bias - This feature group captures the overall bias and subjectivity in the writing. This feature group is strongly based on Recasens et al. work [1] on detecting bias language.It includes the number of hedges, factives, assertives, implicatives, and opinion words.
-* Affect - This feature group captures sentiment and emotion used in the text. It includes LIWC emotion features such as anger, anxiety, aect, and swear words [2]. It also includes positive and negative sentiment measures using VADER sentiment [3].
+* Affect - This feature group captures sentiment and emotion used in the text. It includes LIWC emotion features such as anger, anxiety, and swear words [2]. It also includes positive and negative sentiment measures using VADER sentiment [3].
 * Moral - This feature group is based on Moral Foundation Theory [4] and lexicons used in [5]
 * Event - This feature group captures two concepts: time and location. This group contains 3 features: the number of locations in the article, the number of dates or times in the article, and the number of time related words in an article.
  
@@ -52,7 +52,7 @@ feature_vector, feature_names = nela.extract_event(newsarticle)
 
 If you have used the old version of these features: https://github.com/BenjaminDHorne/Language-Features-for-News, you will notice a few changes: 1. The subjectivity classifier features (previous called NBsubj and NBobj) have been removed. 2. The event group of features has been added. You will also notice the feature names have been better normalized and grouped. 
 
-## Papers
+## Papers to cite when using
 The updated features are described in:
 
 @article{horne2019robust,
@@ -79,3 +79,13 @@ The original features were release in:
 Please cite one of the papers if the features are used in publication. 
 
 ### References
+
+[1] Marta Recasens, Cristian Danescu-Niculescu-Mizil, and Dan Jurafsky. 2013. Linguistic models for analyzing and de-tecting biased language. In Proceedings of the 51st Annual Meeting of the Association for Computational Linguistics(Volume 1: Long Papers), Vol. 1. 1650–1659.
+
+[2] Yla R. Tausczik and James W. Pennebaker. 2010. The psychological meaning of words: LIWC and computerized textanalysis methods. J. Lang. Soc. Psychol. 29, 1 (2010), 24–54.
+
+[3] Clayton J. Hutto and Eric Gilbert. 2014. Vader: A parsimonious rule-based model for sentiment analysis of socialmedia text. In Proceedings of the 8th International AAAI Conference on Weblogs and Social Media.
+
+[4] Jesse Graham, Jonathan Haidt, Sena Koleva, Matt Motyl, Ravi Iyer, Sean P. Wojcik, and Peter H. Ditto. 2013. Moralfoundations theory: The pragmatic validity of moral pluralism. In Advances in Experimental Social Psychology. Vol. 47.Elsevier, 55–130.
+
+[5] Ying Lin, Joe Hoover, Gwenyth Portillo-Wightman, Christina Park, Morteza Dehghani, and Heng Ji. 2018. Acquiringbackground knowledge to improve moral value prediction. In Proceedings of the IEEE/ACM International Conferenceon Advances in Social Networks Analysis and Mining (ASONAM’18). IEEE, 552–559.
