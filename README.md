@@ -6,12 +6,13 @@ NELA (News Landscape) Features are groups of hand-crafted, text-based features f
 
 The features can be broken down into 6 groups:
 
-* Style -
-* Complexity -
-* Bias - 
-* Affect -
-* Moral - 
-* Event - 
+* Style - This feature group captures the style and structure of the article. It includes POS (part of speech) tags and simple linguistic features such as number of quotes, punctuation, and all capitalized words.
+* Complexity - This feature group captures how complex the writing in the article is. It includes lexical diversity (type-token ratio), multiple reading difficulty metrics, length of words, and length of sentences.
+* Bias - This feature group captures the overall bias and subjectivity in the writing. This feature group is strongly based on Recasens et al. work [1] on detecting bias language.It includes the number of hedges, factives, assertives, implicatives, and opinion words.
+* Affect - This feature group captures sentiment and emotion used in the text. It includes LIWC emotion features such as anger, anxiety, aect, and swear words [2]. It also includes positive and negative sentiment measures using VADER sentiment [3].
+* Moral - This feature group is based on Moral Foundation Theory [4] and lexicons used in [5]
+* Event - This feature group captures two concepts: time and location. This group contains 3 features: the number of locations in the article, the number of dates or times in the article, and the number of time related words in an article.
+ 
 
 ## Installation
 
@@ -77,3 +78,4 @@ The original features were release in:
 
 Please cite one of the papers if the features are used in publication. 
 
+### References
