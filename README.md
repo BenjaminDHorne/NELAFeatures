@@ -21,8 +21,9 @@ The easiest way to install is using pip
 
 ## Example package use
 
-Input: text
-Output: feature vector, names of features in vector, both as Python lists
+**Input: text as a string
+
+**Output: feature vector, names of features in vector, both as Python lists
 
 ```python
 from nela_features.nela_features import NELAFeatureExtractor
