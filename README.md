@@ -13,6 +13,7 @@ The features can be broken down into 6 groups:
 * **Moral** - This feature group is based on Moral Foundation Theory [4] and lexicons used in [5]
 * **Event** - This feature group captures two concepts: time and location. This group contains 3 features: the number of locations in the article, the number of dates or times in the article, and the number of time related words in an article.
  
+ All features are normalized by the amount of text in a given news article. However, they may not all be in the same scale. 
 
 ## Installation
 
