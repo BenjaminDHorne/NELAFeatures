@@ -6,20 +6,27 @@ NELA (News Landscape) Features are groups of hand-crafted, text-based features f
 
 The features can be broken down into 6 groups:
 
-*Style
-*Complexity
-*Bias
-*Affect
-*Moral
-*Event
+* Style -
+* Complexity -
+* Bias - 
+* Affect -
+* Moral - 
+* Event - 
 
 ## Installation
 
 The easiest way to install is using pip
 
-'pip install nela_features'
+`pip install nela_features`
 
 ## Example package use
+
+```
+from nela_features.nela_features import NELAFeatureExtractor
+
+nela = NELAFeatureExtractor()
+
+```
 
 ## Notes about old NELA Features
 
