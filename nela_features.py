@@ -360,6 +360,7 @@ class NELAFeatureExtractor(object):
 
     def extract_LIWC(self, tokens):
         normed_LIWC_count_dict = self.Functions.LIWC(tokens)
+        return normed_LIWC_count_dict
 
     def extract_style(self, text, tokens=None, words=None, normed_LIWC_count_dict=None):
         if tokens == None:
@@ -491,17 +492,17 @@ class NELAFeatureExtractor(object):
         Compute each feature group, merge computed vectors and feature names for
         each vector. The names list can be used to create headers in a csv or a db.
         '''
-        # Pretokenize to speed up
+        # Pretokenize to speed up, compute LIWC before hand to speed up
         tokens = word_tokenize(text)
         sentences = sent_tokenize(text)
         words = self.Functions.get_filtered_words(tokens)
-        normed_LIWC_count_dict = extract_LIWC(self, tokens)
+        normed_LIWC_count_dict = self.extract_LIWC(tokens)
 
         # Get each feature group
         svect, snames = self.extract_style(text, tokens, normed_LIWC_count_dict)
         cvect, cnames = self.extract_complexity(text, tokens, sentences)
         bvect, bnames = self.extract_bias(text, tokens, normed_LIWC_count_dict)
-        avect, anames = self.extract_affect(text, tokens, normed_LIWC_count_dict)
+        avect, anames = self.extract_affect(text, tokens, words, normed_LIWC_count_dict)
         mvect, mnames = self.extract_moral(text, tokens)
         evect, enames = self.extract_event(text, tokens, words, normed_LIWC_count_dict)
 
@@ -536,6 +537,7 @@ if __name__ == "__main__":
     #feature_vector, feature_names = nela.extract_moral(newsarticle) # <--- tested
     #feature_vector, feature_names = nela.extract_event(newsarticle) # <--- tested
 
-    print(feature_vector, feature_names)
+    #extract all groups
+    feature_vector, feature_names = nela.extract_all(newsarticle) # <--- tested
 
-    #extract all
+    print(feature_vector, feature_names)
