@@ -21,10 +21,26 @@ The easiest way to install is using pip
 
 ## Example package use
 
+Input: text
+Output: feature vector, names of features in vector, both as Python lists
+
 ```
 from nela_features.nela_features import NELAFeatureExtractor
 
+newsarticle = "Breaking News: Ireland Expected To Become World's First Country To Divest From Fossil Fuels ..." 
+
 nela = NELAFeatureExtractor()
+
+# Extract all feature groups at once
+feature_vector, feature_names = nela.extract_all(newsarticle)
+
+# Extract each feature group independently
+feature_vector, feature_names = nela.extract_style(newsarticle) 
+feature_vector, feature_names = nela.extract_complexity(newsarticle) 
+feature_vector, feature_names = nela.extract_bias(newsarticle)
+feature_vector, feature_names = nela.extract_affect(newsarticle) 
+feature_vector, feature_names = nela.extract_moral(newsarticle) 
+feature_vector, feature_names = nela.extract_event(newsarticle)
 
 ```
 
