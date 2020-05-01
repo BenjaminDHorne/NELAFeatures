@@ -15,9 +15,11 @@ The features can be broken down into 6 groups:
 
 ## Installation
 
-The easiest way to install is using pip
+The easiest way to install is using pip. This will install all Python dependencies and NLTK downloads needed. 
 
 `pip install nela_features`
+
+You can also download the *nela_features* folder and manually import the package and install dependencies. 
 
 ## Example package use
 
@@ -47,7 +49,7 @@ feature_vector, feature_names = nela.extract_event(newsarticle)
 
 ## Whats different between old and new NELA features?
 
-If you have used the old version of these features: , you will notice a few changes. 1. The subjectivity feature was removed. 2. The event group of features has been added. 
+If you have used the old version of these features: https://github.com/BenjaminDHorne/Language-Features-for-News, you will notice a few changes: 1. The subjectivity classifier features (previous called NBsubj and NBobj) have been removed. 2. The event group of features has been added. You will also notice the feature names have been better normalized and grouped. 
 
 ## Papers
 The updated features are described in:
