@@ -13,19 +13,19 @@ The features can be broken down into 6 groups:
 *Moral
 *Event
 
-# Installation
+## Installation
 
 The easiest way to install is using pip
 
-pip install nela_features
+'pip install nela_features'
 
-# Example Package Use
+## Example package use
 
-# Notes about old NELA Features
+## Notes about old NELA Features
 
 If you have used the old version of these features: , you will notice a few changes. 1. The subjectivity feature was removed. 2. The event group of features has been added. 
 
-# Papers
+## Papers
 The updated features are described in:
 
 @article{horne2019robust,
