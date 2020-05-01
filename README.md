@@ -24,7 +24,7 @@ The easiest way to install is using pip
 Input: text
 Output: feature vector, names of features in vector, both as Python lists
 
-```
+```python
 from nela_features.nela_features import NELAFeatureExtractor
 
 newsarticle = "Breaking News: Ireland Expected To Become World's First Country To Divest From Fossil Fuels ..." 
@@ -44,7 +44,7 @@ feature_vector, feature_names = nela.extract_event(newsarticle)
 
 ```
 
-## Notes about old NELA Features
+## Whats different between old and new NELA features?
 
 If you have used the old version of these features: , you will notice a few changes. 1. The subjectivity feature was removed. 2. The event group of features has been added. 
 
