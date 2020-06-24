@@ -9,7 +9,7 @@ setuptools.setup(
      name='nela_features',
      packages=['nela_features'],
      install_requires=['nltk', 'vaderSentiment', 'datefinder', 'numpy'],
-     version='2.0.3',
+     version='2.0.6',
      author="Benjamin D. Horne",
      author_email="benjamindhorne314@gmail.com",
      description="A package to compute text features for news veracity.",
