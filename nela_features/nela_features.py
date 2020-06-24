@@ -165,7 +165,7 @@ class FeatureFunctions(object):
     def POS_counts(self, words):
         pos_tags = ["CC", "CD", "DT", "EX", "FW", "IN", "JJ", "JJR", "JJS", "LS", "MD", "NN", "NNS", "NNP", "NNPS", "PDT",
 					"POS", "PRP", "PRP$", "RB", "RBR", "RBS", "RP", "SYM", "TO", "UH", "WP$", "WRB", "VB", "VBD", "VBG",
-					"VBN", "VBP", "VBZ", "WDT", "WP"]
+					"VBN", "VBP", "VBZ", "WDT", "WP", "$", "''", "(", ")", ",", "--", ".", ":", "``"]
         tag_to_count = {t:0 for t in pos_tags} # init dict
         tagged_words = pos_tag(words)
         for word,tag in tagged_words: #count tags
