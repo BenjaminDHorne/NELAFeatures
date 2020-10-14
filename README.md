@@ -11,7 +11,7 @@ The features can be broken down into 6 groups:
 * **Style** - This feature group captures the style and structure of the article. It includes POS (part of speech) tags and simple linguistic features such as number of quotes, punctuation, and all capitalized words.
 * **Complexity** - This feature group captures how complex the writing in the article is. It includes lexical diversity (type-token ratio), multiple reading difficulty metrics, length of words, and length of sentences.
 * **Bias** - This feature group captures the overall bias and subjectivity in the writing. This feature group is strongly based on Recasens et al. work [1] on detecting bias language.It includes the number of hedges, factives, assertives, implicatives, and opinion words.
-* **Affect** - This feature group captures sentiment and emotion used in the text. It includes LIWC emotion features such as anger, anxiety, and swear words [2]. It also includes positive and negative sentiment measures using VADER sentiment [3].
+* **Affect** - This feature group captures sentiment and emotion used in the text. It includes positive and negative sentiment measures using VADER sentiment [3].
 * **Moral** - This feature group is based on Moral Foundation Theory [4] and lexicons used in [5]
 * **Event** - This feature group captures two concepts: time and location. This group contains 3 features: the number of locations in the article, the number of dates or times in the article, and the number of time related words in an article.
  
@@ -53,7 +53,7 @@ feature_vector, feature_names = nela.extract_event(newsarticle)
 
 ## Whats different between old and new NELA features?
 
-If you have used the old version of these features: https://github.com/BenjaminDHorne/Language-Features-for-News, you will notice a few changes: 1. The subjectivity classifier features (previous called NBsubj and NBobj) have been removed. 2. The event group of features has been added. You will also notice the feature names have been better normalized and grouped. 
+If you have used the old version of these features: https://github.com/BenjaminDHorne/Language-Features-for-News, you will notice a few changes: 1. The subjectivity classifier features (previous called NBsubj and NBobj) have been removed. 2. The event group of features has been added. You will also notice the feature names have been better normalized and grouped. 3. Previously these features were paired with LIWC 2007 Dictionary features. In this version they are not. If you are interested in including LIWC features, please contact Dr. James Pennebaker (pennebaker@utexas.edu) for a LIWC dictionary or purchase the latest version of LIWC: https://liwc.wpengine.com/.
 
 ## Papers to cite when using
 The updated features are described in:
@@ -84,8 +84,6 @@ Please cite one of the papers if the features are used in publication.
 ### References
 
 [1] Marta Recasens, Cristian Danescu-Niculescu-Mizil, and Dan Jurafsky. 2013. Linguistic models for analyzing and de-tecting biased language. In Proceedings of the 51st Annual Meeting of the Association for Computational Linguistics(Volume 1: Long Papers), Vol. 1. 1650–1659.
-
-[2] Yla R. Tausczik and James W. Pennebaker. 2010. The psychological meaning of words: LIWC and computerized textanalysis methods. J. Lang. Soc. Psychol. 29, 1 (2010), 24–54.
 
 [3] Clayton J. Hutto and Eric Gilbert. 2014. Vader: A parsimonious rule-based model for sentiment analysis of socialmedia text. In Proceedings of the 8th International AAAI Conference on Weblogs and Social Media.
 
