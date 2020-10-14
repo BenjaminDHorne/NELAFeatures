@@ -1,5 +1,7 @@
 # nela_features
 
+**NOTE**: This code is for research purposes only!
+
 NELA (News Landscape) Features are groups of hand-crafted, text-based features for news veracity detection. These features have been used on multiple news veracity studies, although they can also be used more generically. 
 
 ## Features
